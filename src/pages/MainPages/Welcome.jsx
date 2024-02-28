@@ -41,15 +41,15 @@ const Box = styled.div`
   background-position: center;
   border: 1px solid transparent;
   border-radius: 5px;
-  height: 250px;
-  width: 400px;
+  height: 200px;
+  width: 250px;
   margin: 10px;
   transition: border-color 0.3s ease-in-out;
 
   &:hover {
     border: 3px solid red;
-    transform: scale(0.95);
-  }
+    transform: scale(1.1); /* Scale the element to 110% of its original size */
+  }  
 `;
 
 const Title = styled.h2`
@@ -98,11 +98,11 @@ const SignInSignUp = () => {
       <MainTitle>Welcome to ReactFlix</MainTitle>
       <BoxContainer>
         <BoxWrapper onClick={() => openForm('login')}>
-          <Box backgroundImage="public/Logo/Login.jpg" />
+          <Box backgroundImage="images/Login.jpg" />
           <Title>Login</Title>
         </BoxWrapper>
         <BoxWrapper onClick={() => openForm('register')}>
-          <Box backgroundImage="public/Logo/Register.jpg" />
+          <Box backgroundImage="images/Register.jpg" />
           <Title>Register</Title>
         </BoxWrapper>
       </BoxContainer>

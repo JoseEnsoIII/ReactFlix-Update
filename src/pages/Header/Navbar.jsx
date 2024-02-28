@@ -62,7 +62,7 @@ const Navbar = () => {
 
   return (
     <Nav>
-      <Logo src="/vite.svg" alt="Netflix Logo" />
+      <Logo src="images/Capture.PNG" alt="ReactFlix Logo" />
       <Links>
         <LinkItem>
           <Link href="/">Home</Link>
