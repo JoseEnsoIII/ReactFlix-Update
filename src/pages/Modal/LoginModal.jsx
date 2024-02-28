@@ -2,14 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-
 const FormContainer = styled.div`
-  width: 400px;
+  width: 90%; /* Adjust according to your design */
+  max-width: 400px; /* Maximum width */
   padding: 20px;
   background-color: #111;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   box-sizing: border-box; /* Ensure padding is included in width */
+  margin: 0 auto; /* Center the form horizontally */
 `;
 
 const Input = styled.input`
@@ -41,14 +42,12 @@ const LoginForm = ({ onSubmit }) => {
 
   return (
     <FormContainer>
-  <form onSubmit={handleSubmit}>
-    <Input type="email" placeholder="Email" required />
-    <Input type="password" placeholder="Password" required />
-    <Link to="/">
-      <Button type="submit">Log In</Button>
-    </Link>
-  </form>
-</FormContainer>
+      <form onSubmit={handleSubmit}>
+        <Input type="email" placeholder="Email" required />
+        <Input type="password" placeholder="Password" required />
+        <Link to="/"><Button type="submit">Log In</Button></Link>
+      </form>
+    </FormContainer>
   );
 };
 

@@ -2,14 +2,23 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-
 const FormContainer = styled.div`
-  width: 400px;
+  width: 80%; /* Set a default width */
+  max-width: 400px; /* Maximum width */
   padding: 20px;
   background-color: #111;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   box-sizing: border-box; /* Ensure padding is included in width */
+  margin: 0 auto; /* Center the form horizontally */
+  
+  @media (max-width: 768px) {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  @media (max-width: 480px) {
+    width: 100%; /* Full width for even smaller screens */
+  }
 `;
 
 const Input = styled.input`
@@ -47,7 +56,7 @@ const RegisterForm = ({ onSubmit }) => {
         <Input type="password" placeholder="Password" required />
         <Link to="/">
           <Button type="submit">Sign Up</Button>
-          </Link>
+        </Link>
       </form>
     </FormContainer>
   );

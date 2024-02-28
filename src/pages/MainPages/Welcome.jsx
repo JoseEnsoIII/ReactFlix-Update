@@ -15,6 +15,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 0;
+  height: 100vh; /* Set initial height */
 `;
 
 const MainTitle = styled.h1`
@@ -26,6 +27,8 @@ const MainTitle = styled.h1`
 const BoxContainer = styled.div`
   display: flex;
   gap: 20px;
+  flex-wrap: wrap; /* Allow boxes to wrap when screen width is small */
+  justify-content: center; /* Center boxes horizontally */
 `;
 
 const BoxWrapper = styled.div`
